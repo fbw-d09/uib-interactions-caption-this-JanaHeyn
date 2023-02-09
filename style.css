@@ -1,0 +1,79 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main
+{
+    width: 500px;
+    height: 600px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.main img
+{
+    width: 400px;
+    position: absolute;
+    left: 50px;
+    transition:
+        rotate 0.5s ease-in,
+        scale 0.5s ease-in;
+}
+
+.overlay
+{
+    height: 600px;
+    width: 500px;
+    background: #262626;
+    position: relative;
+    opacity: 0;
+    transition: 
+        opacity 1s linear; 
+}
+
+.main p,
+.main h1
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    position: absolute;
+    opacity: 0;
+    transition: 
+        opacity 0.5s ease-in;
+    /* border: 2px solid tomato; */
+}
+
+.main h1
+{
+    text-transform: uppercase;
+    top: 200px;
+    left: 100px;
+}
+
+.main p
+{
+    text-transform: capitalize;
+    top: 280px;
+    left: 150px;
+}
+
+.main:hover .overlay
+{
+    opacity: 0.80;
+}
+
+.main:hover p,
+.main:hover h1
+{
+    opacity: 1;
+}
+
+.main:hover img
+{
+    rotate: 20deg;
+    scale: 1.5; 
+}
